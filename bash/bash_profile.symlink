@@ -1,0 +1,17 @@
+# Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
+# ~/.extra can be used for settings you don’t want to commit
+for file in bash_prompt exports aliases functions extra; do
+  file="$HOME/.$file"
+  [ -e "$file" ] && source "$file"
+done
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+test -r /sw/bin/init.sh && . /sw/bin/init.sh
