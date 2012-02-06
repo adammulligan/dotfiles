@@ -72,7 +72,7 @@ alias unissh="ssh zuac071@zeno.cs.rhul.ac.uk"
 alias engssh="ssh ceh70@gate.eng.cam.ac.uk"
 alias cssh="ssh adam@cyanoryx.com -p 443"
 
-alias tunnel="echo 'Starting tunnel on localhost:8080...' && ssh -C2qTnN -D 8080 -p 443 adam@cyanoryx.com"
+alias tunnel="echo 'Starting tunnel on localhost:8080...'; ssh -C2qTnN -D 8080 -p 443 adam@cyanoryx.com"
 alias cdproj="cd ~/uni/Project/"
 
 export FDRHOME=/Users/adammulligan/scripts/fdr2
