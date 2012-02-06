@@ -5,7 +5,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # List all files colorized in long format, including dot files
-alias ls="ls -Gl --color=auto"
+# Linode only
+#alias ls="ls -Gl --color=auto"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
@@ -72,7 +73,11 @@ alias unissh="ssh zuac071@zeno.cs.rhul.ac.uk"
 alias engssh="ssh ceh70@gate.eng.cam.ac.uk"
 alias cssh="ssh adam@cyanoryx.com -p 443"
 
+# Creates a tunnel over port 443 (server must be set up for this)
+# 443 should allow you past most corporate firewalls (looking at you Trinity College, Cambridge)
 alias tunnel="echo 'Starting tunnel on localhost:8080...'; ssh -C2qTnN -D 8080 -p 443 adam@cyanoryx.com"
+alias uni_tunnel="echo 'Starting tunnel on localhost:8080 (WARNING: all connections will likely be logged on Zeno)...'; ssh -C2qTnN -D 8080 zuac071@zeno.cs.rhul.ac.uk"
+
 alias cdproj="cd ~/uni/Project/"
 
 export FDRHOME=/Users/adammulligan/scripts/fdr2
