@@ -75,8 +75,8 @@ alias cssh="ssh adam@cyanoryx.com -p 443"
 
 # Creates a tunnel over port 443 (server must be set up for this)
 # 443 should allow you past most corporate firewalls (looking at you Trinity College, Cambridge)
-alias tunnel="echo 'Starting tunnel on localhost:8080...'; ssh -C2qTnN -D 8080 -p 443 adam@cyanoryx.com"
-alias uni_tunnel="echo 'Starting tunnel on localhost:8080 (WARNING: all connections will likely be logged on Zeno)...'; ssh -C2qTnN -D 8080 zuac071@zeno.cs.rhul.ac.uk"
+alias socks_tunnel="tunnel -h 127.0.0.1 -p 8080 -r adam@cyanoryx.com -rp 443"
+alias uni_tunnel="echo '(WARNING: all connections will likely be logged on Zeno)...';tunnel -h 127.0.0.1 -p 8080 -r zuac071@zeno.cs.rhul.ac.uk -rp 22"
 
 alias cdproj="cd ~/uni/Project/"
 
