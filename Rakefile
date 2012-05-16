@@ -10,16 +10,20 @@ task :install do
 
   dot_files.each do |dot_file|
     file = dot_file.split('/').last.split('.symlink').last
+
     target = "#{ENV["HOME"]}/.#{file}"
+
+    # Symlink zsh files to oh-my-zsh custom dir
+    target = "#{ENV["HOME"]}/.oh-my-zsh/custom/#{file}" if File.extname(file) == ".zsh"
 
     if File.exists?(target) || File.symlink?(target)
       puts "File #{target} already exists, backing up and removing old file"
       `mv "#{target}" "#{target}.backup"`
       FileUtils.rm_rf(target)
       # TODO ask to replace/skip existing dot_files
-    else
-      `ln -s "$PWD/#{dot_file}" "#{target}"`
     end
+
+    `ln -s "$PWD/#{dot_file}" "#{target}"`
   end
 
   shell_files = Dir.glob('*/**{.sh}')
