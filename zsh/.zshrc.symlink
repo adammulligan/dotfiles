@@ -33,8 +33,16 @@ plugins=(git osx rails ruby rvm cap bundler brew rake)
 
 source $ZSH/oh-my-zsh.sh
 
+# Remove after this pull request is closed
+# https://github.com/robbyrussell/oh-my-zsh/pull/1126#issuecomment-5881174
+for config_file ($ZSH_CUSTOM/*.zsh(N)) source $config_file
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/scripts
+
+export EDITOR="vim"
+
+[ -s "/Users/adammulligan/.scm_breeze/scm_breeze.sh" ] && source "/Users/adammulligan/.scm_breeze/scm_breeze.sh"

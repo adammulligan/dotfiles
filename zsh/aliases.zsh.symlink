@@ -51,4 +51,4 @@ alias cssh="ssh adam@cyanoryx.com"
 
 # Creates a tunnel over port 443 (server must be set up for this)
 # 443 should allow you past most corporate firewalls (looking at you Trinity College, Cambridge)
-alias socks_tunnel="tunnel -h 127.0.0.1 -p 8080 -r adam@cyanoryx.com -rp 443"
+alias socks_tunnel="tunnel -h 127.0.0.1 -p 8080 -r adam@cyanoryx.com -rp 22"
