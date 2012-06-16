@@ -1,0 +1,32 @@
+session:
+  name: "rails-dev"
+  windows:
+    - name: "first"
+      root: "~/src"
+      splits:
+        - cmd: "pwd"
+        - cmd: "pwd"
+          width: 30
+        - cmd: "pwd"
+          height: 50
+          target: "bottom-right"
+    - name: "servers"
+      root: "~/src"
+      splits:
+        - cmd: "postgres -D /usr/local/var/postgres"
+        - cmd: "redis-server"
+          width: 50
+        - cmd: "pwd"
+          height: 50
+          target: "bottom-right"
+        - cmd: "pwd"
+          height: 50
+          target: "bottom-left"
+    - name: "stats"
+      root: "/"
+      splits:
+        - cmd: "htop"
+    - name: "notes"
+      root: "~/"
+      splits:
+        - cmd: "vim"

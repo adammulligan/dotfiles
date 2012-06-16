@@ -42,7 +42,13 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X1
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/scripts
+PATH=$PATH:/Library/Frameworks/GDAL.framework/Versions/1.9/Programs
 
 export EDITOR="vim"
 
+# Teamocil autocomplete
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+
 [ -s "/Users/adammulligan/.scm_breeze/scm_breeze.sh" ] && source "/Users/adammulligan/.scm_breeze/scm_breeze.sh"
+
+[ -s "/Users/adam/.scm_breeze/scm_breeze.sh" ] && source "/Users/adam/.scm_breeze/scm_breeze.sh"

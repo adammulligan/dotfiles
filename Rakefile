@@ -15,6 +15,7 @@ task :install do
 
     # Symlink zsh files to oh-my-zsh custom dir
     target = "#{ENV["HOME"]}/.oh-my-zsh/custom/#{file}" if File.extname(file) == ".zsh"
+    target = "#{ENV["HOME"]}/.teamocil/#{file}" if File.extname(file) == ".yml" # Fix to apply only to teamocil dir
 
     if File.exists?(target) || File.symlink?(target)
       puts "File #{target} already exists, backing up and removing old file"
