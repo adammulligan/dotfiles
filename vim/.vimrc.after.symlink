@@ -1,5 +1,0 @@
-let g:slime_target = "tmux"
-
-map <C-x> :SlimuxREPLSendSelection<CR>
-
-set showcmd
