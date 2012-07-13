@@ -58,9 +58,15 @@ task :uninstall do
     target = "#{ENV["HOME"]}/.#{file}"
     target = "#{ENV["HOME"]}/.oh-my-zsh/custom/#{file}"  if File.extname(file) == ".zsh"
 
-    puts "Removing #{target}..."
+    if File.symlink?(target)
+      puts "Removing #{target}..."
+      FileUtils.rm_rf(target)
+    end
 
-    FileUtils.rm_rf(target)
+    # Restore any backups made
+    if File.exists?("#{ENV['HOME']}/.#{file}.backup")
+      `mv #{ENV['HOME']}/.#{file}.backup #{target}`
+    end
   end
 end
 
