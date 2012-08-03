@@ -1,0 +1,91 @@
+<a {{action "doSearch"}}>Home</a>
+{{#view Checklist.ChecklistForm
+  controllerBinding="controllers.taxonConceptController"
+  filtersControllerBinding="controllers.selectedFiltersController"
+}}
+  <p>Filter by country:</p>
+  {{view Em.Select
+    multiple = "true"
+    viewName = "countryFilter"
+    contentBinding = "controllers.countriesController"
+    selectionBinding = "controllers.selectedFiltersController.countries"
+    optionLabelPath = "content.name"
+    optionValuePath = "content.id"
+  }}
+<p>Selected countries:
+{{#each controllers.selectedFiltersController.countries}}
+  {{name}}
+{{/each}}
+</p>
+  <p>Filter by region:</p>
+  {{view Em.Select
+    multiple = "true"
+    viewName = "regionFilter"
+    contentBinding = "controllers.regionsController"
+    selectionBinding = "controllers.selectedFiltersController.regions"
+    optionLabelPath = "content.name"
+    optionValuePath = "content.id"
+  }}
+  <p>Selected regions:
+  {{#each controllers.selectedFiltersController.regions}}
+    {{name}}
+  {{/each}}
+  </p>
+  <p>Filter by appendix:</p>
+  {{view Em.Select
+    multiple = "true"
+    viewName = "appendixFilter"
+    contentBinding = "controllers.appendicesController"
+    selectionBinding = "controllers.selectedFiltersController.appendices"
+    optionLabelPath = "content.abbreviation"
+    optionValuePath = "content.id"
+  }}
+  <p>Selected appendices:
+  {{#each controllers.selectedFiltersController.appendices}}
+    {{abbreviation}}
+  {{/each}}
+  </p>
+  <p>
+  {{view Ember.Checkbox checkedBinding="controllers.selectedFiltersController.taxonomicLayout"}} taxonomic layout
+  </p>
+  <button type="submit">Go</button>
+
+  <hr />
+
+  <p>
+    <input type="text" style="font-size:14px;width:inherit !important;" id="save_search_name" />
+    <button {{action "save_search"}} type="button">Save Search</button>
+  </p>
+
+  <p>
+    Saved Searches:
+    {{view Em.Select
+      viewName = "savedSearchSelection"
+      contentBinding = "controllers.savedSearchController"
+      selectionBinding = "controllers.savedSearchController.selection"
+      optionLabelPath = "content.name"
+      optionValuePath = "content.id"
+    }}
+  </p>
+
+  <hr>
+
+  <h2>Download pdf version:</h2>
+  <ul>
+    <li>CITES species index:
+      <a href="{{unbound indexPdfLink}}">full</a>
+      <a href="#" {{action "downloadCustomIndexPdf" on="click"}}>customised</a>
+    </li>
+    <li>history of CITES listings:
+      <a href="{{unbound historyPdfLink}}">full</a>
+      <a href="#" {{action "downloadCustomHistoryPdf" on="click"}}>customised</a>
+    </li>
+  </ul>
+
+{{/view}}
+{{#each controllers.taxonConceptController.content}}
+  {{view Checklist.KingdomListView contentBinding="this"
+    taxonConceptsControllerBinding="controllers.taxonConceptController"
+    filtersControllerBinding="controllers.selectedFiltersController"
+  }}
+{{/each}}

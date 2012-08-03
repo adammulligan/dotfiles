@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/adam/src/unep/PPE/config/deploy'
 let g:netrw_dirhist_2='/Users/adam/src/unep/PPE/test'
+let g:netrw_dirhist_3='/Users/adam/.vim'
+let g:netrw_dirhist_4='/Users/adam/src/unep/PPE/config/deploy'
+let g:netrw_dirhist_5='/Users/adam/src/unep/PPE/app'
+let g:netrw_dirhist_6='/Users/adam/src/unep/PPE/config/deploy'
+let g:netrw_dirhist_7='/Users/adam/src/unep/cites-checklist'
+let g:netrw_dirhist_8='/Users/adam/src/unep/SAPI/lib/tasks'

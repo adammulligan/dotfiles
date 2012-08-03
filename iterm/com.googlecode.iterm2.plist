@@ -178,16 +178,27 @@
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
+	<key>NSToolbar Configuration Terminal Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>2</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>0</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>995 77 445 270 0 0 1440 878 </string>
+	<string>1305 102 445 270 0 0 1920 1058 </string>
 	<key>NSWindow Frame NSNavGotoPanel</key>
 	<string>506 624 432 134 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>519 245 924 485 0 0 1920 1080 </string>
+	<string>996 90 924 485 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>662 0 1273 776 0 0 1920 1058 </string>
+	<string>113 93 1627 874 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>6 4 1432 874 0 0 1440 878 </string>
+	<string>638 68 1273 776 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -357,7 +368,7 @@
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
-			<false/>
+			<true/>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -740,11 +751,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Inconsolata 11</string>
+			<string>Inconsolata-dzForPowerline 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Inconsolata 12</string>
+			<string>Inconsolata-dzForPowerline 10</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1705,7 +1716,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-06-17T22:39:33Z</date>
+	<date>2012-07-31T10:01:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1730,8 +1741,6 @@
 	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
-		<string>Jobs</string>
 		<string>Notes</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
