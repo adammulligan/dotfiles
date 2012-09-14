@@ -11,7 +11,7 @@ task :install do
   end
 
   puts "Enter a hostname for this computer:"
-  hostname = STDIN.gets
+  hostname = STDIN.gets.gsub("\n", "")
   `scutil --set ComputerName "#{hostname}"`
   `scutil --set HostName "#{hostname}"`
   `scutil --set LocalHostName "#{hostname.gsub(/\ /, '-')}"`

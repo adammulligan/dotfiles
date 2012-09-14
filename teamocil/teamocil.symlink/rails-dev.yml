@@ -25,7 +25,7 @@ session:
     - name: "stats"
       root: "/"
       splits:
-        - cmd: "htop"
+        - cmd: "glances"
     - name: "notes"
       root: "~/"
       splits:
