@@ -10,12 +10,6 @@ task :install do
     exit
   end
 
-  puts "Enter a hostname for this computer:"
-  hostname = STDIN.gets.gsub("\n", "")
-  `scutil --set ComputerName "#{hostname}"`
-  `scutil --set HostName "#{hostname}"`
-  `scutil --set LocalHostName "#{hostname.gsub(/\ /, '-')}"`
-
   dot_files = Dir.glob('*/**{.symlink}')
 
   dot_files.each do |dot_file|
