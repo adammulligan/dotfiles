@@ -9,6 +9,10 @@ digga() {
   dig +nocmd "$1" any +multiline +noall +answer
 }
 
+notify() {
+  sleep $1 && xmessage -nearmouse "$2"
+}
+
 # Moves to, or creates and moves to, a project folder in ~/src/ named
 # after the first parameter
 p() {

@@ -1,0 +1,6 @@
+vim/vim.symlink/_backup
+vim/vim.symlink/_tmp
+vim/vim.symlink/.netrwhist
+vim/vim.symlink/.VimballRecord
+
+.DS_Store
