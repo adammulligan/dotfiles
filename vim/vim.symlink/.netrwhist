@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/adam/src/unep/cites-checklist'
-let g:netrw_dirhist_2='/Users/adam/src/unep/SAPI/app/models'
-let g:netrw_dirhist_3='/Users/adam/src/unep/cites-checklist/app/javascripts/helpers'
-let g:netrw_dirhist_4='/Users/adam/src/unep/SAPI/app/controllers'
-let g:netrw_dirhist_5='/Users/adam/src/unep/cites-checklist/app/javascripts/helpers'
-let g:netrw_dirhist_6='/Users/adam/src/unep/cites-checklist/app/javascripts'
